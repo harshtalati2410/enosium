@@ -36,9 +36,7 @@ const NavbarDropdown = () => {
     width > 1024 && handleSideNavToggle();
   }, [width]);
 
-  function handleSideNavToggle() {
-    console.log("toggle it");
-  }
+  function handleSideNavToggle() {}
 
   return (
     <div>
@@ -46,22 +44,22 @@ const NavbarDropdown = () => {
         onClick={openModal}
         style={{
           color: "black",
-          margin: "5px",
           fontSize: "large",
-          padding: "5px",
+          height: "70px",
         }}
       >
-        <i className="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars w-8 h-8"></i>
       </button>
       {width < 1024 && (
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        closeTimeoutMS={200}
-      >
-        <Sidebar closeModal={closeModal} />
-      </Modal>)}
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          closeTimeoutMS={200}
+        >
+          <Sidebar closeModal={closeModal} />
+        </Modal>
+      )}
     </div>
   );
 };

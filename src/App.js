@@ -1,29 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import LandingPage from "./components/LandingPage";
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedComponents";
 
 function App() {
   return (
-    <div className="flex overflow-hidden w-full h-[100vh] ">
-      <div
-        className="hidden lg:block h-full w-1/5 min-w-[250px] border-r-[1px] border-solid border-gray-700
-      "
-      >
-        <div className="h-[70px] flex justify-center align-middle border-b-[1px] border-gray-700">
-          logo
-        </div>
-
-        <div className="h-full">
-          <Sidebar />
-        </div>
-      </div>
-      <div className="w-full lg:w-4/5 block">
-        <div className="h-[70px] border-b-[1px] border-solid border-gray-700">
+    <div className="block w-full">
+      <Router>
+        <div className="sticky z-40 top-0 h-[70px] bg-white border-b-[2px] border-solid border-gray-300">
           <Navbar />
-        </div >
-        <LandingPage />
-      </div>
+        </div>
+        <AnimatedRoutes />
+      </Router>
     </div>
   );
 }
