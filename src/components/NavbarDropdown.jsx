@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 Modal.setAppElement(document.getElementById("root"));
 
 const NavbarDropdown = () => {
-  let subtitle;
+  
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -14,7 +14,7 @@ const NavbarDropdown = () => {
   }
 
   function afterOpenModal() {
-    subtitle.style.color = "#f00";
+    console.log('afterOpenModal');
   }
 
   function closeModal(e) {

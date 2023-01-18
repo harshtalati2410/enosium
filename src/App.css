@@ -1,4 +1,4 @@
-.bg-primary{
+.bg-primary {
     background-color: rgb(3, 3, 26);
 }
 
@@ -7,19 +7,28 @@
     transition: opacity 200ms ease-in-out;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
     opacity: 1;
 }
 
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
     opacity: 0;
 }
 
-.ReactModal__Content{
+.ReactModal__Content {
     inset: 0;
     position: absolute;
     left: 10%;
     top: 10%;
-    width: max(251px,30vw);
-    height: 500px
+    width: max(251px, 30vw);
+    height: 500px;
 }
+
+.primary-gradient {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(45deg, rgb(112, 17, 176) 0%, rgba(46, 1, 129, 1) 74%, rgb(4, 61, 118) 100%);
+}
+
+
+
+
