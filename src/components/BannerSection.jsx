@@ -54,16 +54,22 @@ function BannerSection(props) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <p className="mb-10">Confused and scared of taking that loan? Our web service helps to keep financials stable and your dreams growing. </p>
+        <p className="mb-10">
+          Confused and scared of taking that loan? Our web service helps to keep
+          financials stable and your dreams growing.{" "}
+        </p>
         <div className="flex">
           <motion.div
-            initial={{ x: -400 }}
-            animate={{ x: 0 }}
+            animate={{
+              x: 0,
+              scale: [1,1.2,1,1.3],
+              transition: { duration: 3,repeat:Infinity},
+            }}
             transition={{ duration: 1 }}
             onClick={clickHandler}
-            className="text-center border-[2px] w-fit mr-4 py-2 px-3 border-white rounded-full bg-gradient-to-tr from-purple-600 to-blue-700 hover:text-orange-400 hover:bg-white hover:scale-105 hover:border-orange-400 ease-out  duration-300 cursor-pointer"
+            className="text-center text-[20px] border-[2px] w-fit ml-4 py-2 px-3 border-white rounded-full bg-gradient-to-tr from-purple-600 to-blue-700 hover:text-orange-400 hover:bg-white hover:scale-105 hover:border-orange-400 ease-out duration-300 cursor-pointer"
           >
-            Start
+            Get Started
           </motion.div>
         </div>
       </motion.div>

@@ -31,6 +31,7 @@ function Services(props) {
         {services.map((item) => (
           <ServiceBlock
             key={item.id}
+            id={item.id}
             title={item.title}
             des={item.des}
             imgLink={item.img}

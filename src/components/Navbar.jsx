@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import NavbarDropdown from "./NavbarDropdown";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Navbar(props) {
   const location = useLocation();
@@ -53,7 +54,7 @@ function Navbar(props) {
       <div className=" hidden lg:flex text-[20px] font-semibold">
         <a
           href="/"
-          className="transition-all  duration-500 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
+          className="transition-all  duration-200 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
           onClick={(e) => {
             e.preventDefault();
 
@@ -73,7 +74,7 @@ function Navbar(props) {
         </a>
         <a
           href="/"
-          className="transition-all duration-500 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
+          className="transition-all duration-200 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
           onClick={(e) => {
             e.preventDefault();
 
@@ -93,7 +94,7 @@ function Navbar(props) {
         </a>
         <a
           href="/"
-          className="transition-all duration-500 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
+          className="transition-all duration-200 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
           onClick={(e) => {
             e.preventDefault();
 
@@ -113,7 +114,7 @@ function Navbar(props) {
         </a>
         <a
           href="/"
-          className="transition-all duration-500 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
+          className="transition-all duration-200 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
           onClick={(e) => {
             e.preventDefault();
 
@@ -133,9 +134,13 @@ function Navbar(props) {
         </a>
       </div>
 
-      <div
-        className="py-2 px-5 mb-2 mt-2 mr-2 bg-gradient-to-tr from-cyan-500 to-blue-500 transition-all duration-75 rounded-full text-white text-[22px]
-        text-bold shadow-sm border-[2px] border-transparent hover:border-sky-400 hover:bg-gradient-to-bl hover:shadow-xl"
+      <motion.div
+        animate={{
+          scale: [1,1.025,1],
+          transition: { duration: 1,repeat:Infinity },
+        }}
+        whileHover={{scale:1.05,backgroundColor:"#fff",color:"#01285b",transition:{duration:0.2}}}
+        className="shadow-sm text-[20px] border-[1px] border-blue-600 bg-blue-600 text-white py-2 rounded-xl my-2 mx-2 px-4"
       >
         <Link
           to="/WorkSpace"
@@ -149,7 +154,7 @@ function Navbar(props) {
             "Get Started"
           )}
         </Link>
-      </div>
+      </motion.div>
     </nav>
   );
 }

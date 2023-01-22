@@ -1,8 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function ServiceBlock(props) {
   return (
-    <div className="col-span-1 grid grid-rows-6 rounded-md shadow-xl overflow-hidden border-[1px] border-gray-200 hover:shadow-md transition-all duration-200">
+    <motion.div
+      animate={{
+        scale: [1, 0.96, 1],
+        transition: {
+          delay: (props.id - 1) * 2,
+          duration: 3,
+          repeat: Infinity,
+        },
+      }}
+      className="col-span-1 grid grid-rows-6 rounded-md shadow-xl overflow-hidden border-[1px] border-gray-200 hover:shadow-md transition-all duration-200"
+    >
       <div className="row-span-4 grid grid-cols-6  bg-gradient-to-tr from-purple-900 to-sky-700">
         <div className="col-start-2 col-end-6 grid grid-rows-8">
           <div className="row-start-2 col-end-8">
@@ -16,7 +27,7 @@ function ServiceBlock(props) {
         </div>
         <div className="py-2 px-4">{props.des}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
