@@ -4,7 +4,6 @@ import BannerSection from "./BannerSection";
 import Services from "./Services";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import UserGuide from "./UserGuide";
 
 function Home(props) {
   return (
@@ -17,7 +16,6 @@ function Home(props) {
     >
       <BannerSection />
       <Services />
-      <UserGuide />
       <AboutUs />
       <ContactUs />
     </motion.div>

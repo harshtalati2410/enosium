@@ -1,12 +1,18 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import FormI from "./FormI";
+import FormII from "./FormII";
+import FormIII from "./FormIII";
+
 
 function Form(props) {
+  const [formNumber, setFormNumber] = useState(1);
   return (
-    <div className="h-full bg-gradient-to-tr from-blue-50 via-blue-100 to-blue-50 rounded-md px-4 py-4">
-      <h1 className="text-[24px] font-semibold text-center">Fill this form</h1>
-      <motion.div></motion.div>
-    </div>
+    <form>
+      {formNumber === 1 && <FormI setFormNumber={setFormNumber} />}
+      {formNumber === 2 && <FormII setFormNumber={setFormNumber} />}
+      {formNumber === 3 && <FormIII setFormNumber={setFormNumber} handleClose={props.handleClose}/>}
+    </form>
   );
 }
 

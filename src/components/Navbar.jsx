@@ -93,26 +93,6 @@ function Navbar(props) {
             if (window.location.pathname !== "/") {
               navigate("/");
               setTimeout(() => {
-                let hero = document.getElementById("UserGuide");
-                hero && hero.scrollIntoView({ behavior: "smooth" });
-              }, 1000);
-            } else {
-              let hero = document.getElementById("UserGuide");
-              hero && hero.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Guide
-        </a>
-        <a
-          href="/"
-          className="transition-all duration-500 ml-8 pt-5 hover:border-orange-500 hover:border-b-[2px] hover:text-sky-500 px-2"
-          onClick={(e) => {
-            e.preventDefault();
-
-            if (window.location.pathname !== "/") {
-              navigate("/");
-              setTimeout(() => {
                 let hero = document.getElementById("AboutUs");
                 hero && hero.scrollIntoView({ behavior: "smooth" });
               }, 1000);

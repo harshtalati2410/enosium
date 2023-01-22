@@ -57,26 +57,6 @@ function Sidebar(props) {
             if (window.location.pathname !== "/") {
               navigate("/");
               setTimeout(() => {
-                let hero = document.getElementById("UserGuide");
-                hero && hero.scrollIntoView({ behavior: "smooth" });
-              }, 1000);
-            } else {
-              let hero = document.getElementById("UserGuide");
-              hero && hero.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Guide
-        </a>
-        <a
-          href="/"
-          className="bg-gray-100 rounded-r mt-1 block px-1 py-1 border-transparent border-l-[2px] hover:border-orange-500 hover:text-sky-400"
-          onClick={(e) => {
-            e.preventDefault();
-
-            if (window.location.pathname !== "/") {
-              navigate("/");
-              setTimeout(() => {
                 let hero = document.getElementById("AboutUs");
                 hero && hero.scrollIntoView({ behavior: "smooth" });
               }, 1000);
