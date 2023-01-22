@@ -38,7 +38,7 @@ export default function FormButton() {
       >
         <Box sx={style} className="rounded-md">
           <button
-            className="w-[35px] h-[35px] rounded-full border-[1px] border-gray-200 hover:"
+            className="w-[35px] h-[35px] rounded-full border-[1px] border-blue-600 text-blue-600  hover:bg-blue-600 hover:text-white transition-all duration-200"
             onClick={() => handleClose()}
           >
             X
@@ -47,7 +47,7 @@ export default function FormButton() {
             id="modal-modal-title"
             variant="h6"
             component="div"
-            className="block uppercase text-gray-700 font-bold mb-2 text-center"
+            className="block uppercase text-blue-600 font-bold mb-2 text-center"
           >
             Check Your Loan Safety
           </Typography>

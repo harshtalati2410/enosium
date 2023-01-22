@@ -6,14 +6,14 @@ import { AppContext } from "../App";
 function FormI(props) {
   const { data, setData } = useContext(AppContext);
   const inputs = [
-    "Number of people who will provide maintenance",
-    "loan amount taken",
-    "Loan History",
-    "Purpose of taking loan",
-    "Guarantor or Debtor",
-    "Marital Status",
-    "Age of the applicant in Number of Years",
-    "Working abroad or not",
+    "Number_of_people_who_will_provide_maintenance",
+    "loan_amount_taken",
+    "Loan_History",
+    "Purpose_of_taking_loan",
+    "Guarantor_or_Debtor",
+    "Marital_Status",
+    "Age_of_the_applicant_in_Number_of_Years",
+    "Working_abroad_or_not",
   ];
 
   const oneToTwo = (e) => {
@@ -40,7 +40,7 @@ function FormI(props) {
     >
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="Number of people who will provide maintenance"
+          htmlFor="Number_of_people_who_will_provide_maintenance"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Maintenance providers
@@ -49,13 +49,13 @@ function FormI(props) {
           onChange={(e) =>
             setData({
               ...data,
-              "Number of people who will provide maintenance": e.target.value,
+              Number_of_people_who_will_provide_maintenance: e.target.value,
             })
           }
-          id="Number of people who will provide maintenance"
-          name="Number of people who will provide maintenance"
+          id="Number_of_people_who_will_provide_maintenance"
+          name="Number_of_people_who_will_provide_maintenance"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Number of people who will provide maintenance"]}
+          value={data["Number_of_people_who_will_provide_maintenance"]}
         >
           <option value="" disabled>
             Choose
@@ -66,74 +66,74 @@ function FormI(props) {
       </div>
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="loan amount taken"
+          htmlFor="loan_amount_taken"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Loan Amount
         </label>
         <input
           onChange={(e) => {
-            setData({ ...data, "loan amount taken": e.target.value });
+            setData({ ...data, loan_amount_taken: e.target.value });
           }}
-          id="loan amount taken"
+          id="loan_amount_taken"
           type="number"
           min="200"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           placeholder="Choose"
-          value={data["loan amount taken"]}
+          value={data["loan_amount_taken"]}
         />
       </div>
       <div className="col-span-4">
         <label
-          htmlFor="Loan History"
+          htmlFor="Loan_History"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Loan History
         </label>
         <select
           onChange={(e) => {
-            setData({ ...data, "Loan History": e.target.value });
+            setData({ ...data, Loan_History: e.target.value });
           }}
-          id="Loan History"
-          name="Loan History"
+          id="Loan_History"
+          name="Loan_History"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Loan History"]}
+          value={data["Loan_History"]}
         >
           <option value="" disabled>
             Choose
           </option>
           <option value="critical account/other loans existing (not at this bank)">
-            critical account/other loans existing (not at this bank)
+            Critical account/other loans existing (not at this bank)
           </option>
           <option value="existing loans paid back duly till now">
-            existing loans paid back duly till now
+            Existing loans paid back duly till now
           </option>
           <option value="all loans at this bank paid back duly">
-            all loans at this bank paid back duly
+            All loans at this bank paid back duly
           </option>
           <option value="delay in paying off loans in the past">
-            delay in paying off loans in the past
+            Delay in paying off loans in the past
           </option>
           <option value="no loans taken/all loans paid back duly">
-            no loans taken/all loans paid back duly
+            No loans taken/all loans paid back duly
           </option>
         </select>
       </div>
       <div className="col-span-4">
         <label
-          htmlFor="Purpose of taking loan"
+          htmlFor="Purpose_of_taking_loan"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Purpose of taking loan
         </label>
         <select
           onChange={(e) => {
-            setData({ ...data, "Purpose of taking loan": e.target.value });
+            setData({ ...data, Purpose_of_taking_loan: e.target.value });
           }}
-          id="Purpose of taking loan"
-          name="Purpose of taking loan"
+          id="Purpose_of_taking_loan"
+          name="Purpose_of_taking_loan"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Purpose of taking loan"]}
+          value={data["Purpose_of_taking_loan"]}
         >
           <option value="" disabled>
             Choose
@@ -157,72 +157,72 @@ function FormI(props) {
       </div>
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="Guarantor or Debtor"
+          htmlFor="Guarantor_or_Debtor"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Guarantor or Debtor
         </label>
         <select
           onChange={(e) => {
-            setData({ ...data, "Guarantor or Debtor": e.target.value });
+            setData({ ...data, Guarantor_or_Debtor: e.target.value });
           }}
-          name="Guarantor or Debtor"
-          id="Guarantor or Debtor"
+          name="Guarantor_or_Debtor"
+          id="Guarantor_or_Debtor"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Guarantor or Debtor"]}
+          value={data["Guarantor_or_Debtor"]}
         >
           <option value="" disabled>
             Choose
           </option>
-          <option value="none">none</option>
-          <option value="gaurantor">gaurantor</option>
-          <option value="co-applicant">co-applicant</option>
+          <option value="none">None</option>
+          <option value="gaurantor">Gaurantor</option>
+          <option value="co-applicant">Co-applicant</option>
         </select>
       </div>
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="Marital Status"
+          htmlFor="Marital_Status"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Marital Status
         </label>
         <select
           onChange={(e) => {
-            setData({ ...data, "Marital Status": e.target.value });
+            setData({ ...data, Marital_Status: e.target.value });
           }}
-          name="Marital Status"
-          id="Marital Status"
+          name="Marital_Status"
+          id="Marital_Status"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Marital Status"]}
+          value={data["Marital_Status"]}
         >
           <option value="" disabled>
             Choose
           </option>
           <option value="female and divorced/seperated/married">
-            female and divorced/seperated/married
+            Female and divorced/seperated/married
           </option>
           <option value="male and single">male and single</option>
           <option value="male and married/widowed">
-            male and married/widowed
+            Male and married/widowed
           </option>
           <option value="male and divorced/seperated">
-            male and divorced/seperated
+            Male and divorced/seperated
           </option>
         </select>
       </div>
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="Age of the applicant in Number of Years"
+          htmlFor="Age_of_the_applicant_in_Number_of_Years"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Age
         </label>
         <input
-          name="Age of the applicant in Number of Years"
+          name="Age_of_the_applicant_in_Number_of_Years"
           onChange={(e) => {
             setData({
               ...data,
-              "Age of the applicant in Number of Years": e.target.value,
+              Age_of_the_applicant_in_Number_of_Years: e.target.value,
             });
           }}
           type="number"
@@ -230,24 +230,24 @@ function FormI(props) {
           max="100"
           placeholder="Choose"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Age of the applicant in Number of Years"]}
+          value={data["Age_of_the_applicant_in_Number_of_Years"]}
         />
       </div>
       <div className="md:col-span-2 col-span-4">
         <label
-          htmlFor="Working abroad or not"
+          htmlFor="Working_abroad_or_not"
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
         >
           Working abroad or not
         </label>
         <select
           onChange={(e) => {
-            setData({ ...data, "Working abroad or not": e.target.value });
+            setData({ ...data, Working_abroad_or_not: e.target.value });
           }}
-          id="Working abroad or not"
-          name="Working abroad or not"
+          id="Working_abroad_or_not"
+          name="Working_abroad_or_not"
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          value={data["Working abroad or not"]}
+          value={data["Working_abroad_or_not"]}
         >
           <option value="" disabled>
             Choose
@@ -258,7 +258,7 @@ function FormI(props) {
       </div>
       <button
         onClick={oneToTwo}
-        className="py-3 col-start-2 col-end-4 border-black border-[2px] rounded"
+        className="py-3 col-start-2 col-end-4 text-blue-600 border-blue-600 border-[2px] rounded hover:bg-blue-600 hover:border-blue-600 hover:scale-105 hover:text-white transition-all duration-300"
       >
         Next
       </button>

@@ -33,10 +33,17 @@ function Navbar(props) {
         <a
           href="/"
           onClick={(e) => {
-            if (window.location.pathname === "/") {
-              e.preventDefault();
-              document.body.scrollTop = 0;
-              document.documentElement.scrollTop = 0;
+            e.preventDefault();
+
+            if (window.location.pathname !== "/") {
+              navigate("/");
+              setTimeout(() => {
+                let hero = document.getElementById("BannerSection");
+                hero && hero.scrollIntoView({ behavior: "smooth" });
+              }, 1000);
+            } else {
+              let hero = document.getElementById("BannerSection");
+              hero && hero.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
