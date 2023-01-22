@@ -9,10 +9,7 @@ function ContactUs(props) {
             FinSafe
           </h1>
           <p className="pt-10px text-[19px]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
-            architecto totam laborum animi veritatis ut sit, harum officiis iste
-            eos ratione aperiam corporis dolorem error iusto? Dicta minus cumque
-            assumenda.
+            Stay tuned! In the future, our team plans to provide you with financial suggestions to improve your financials. 
           </p>
         </div>
         <div className="col-span-full sm:col-span-6 lg:col-start-7 lg:col-end-10  px-2 py-6">
@@ -42,17 +39,6 @@ function ContactUs(props) {
             </div>
             <div
               className="pt-1 pl-3 border-transparent 
-                      border-l-[2px]
-                      hover:border-orange-400 hover:text-blue-300 transition-all duration-500 cursor-pointer"
-              onClick={(e) => {
-                let hero = document.getElementById("UserGuide");
-                hero && hero.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              Guide
-            </div>
-            <div
-              className="pt-1 pl-3 border-transparent 
                         border-l-[2px]
                         hover:border-orange-400 hover:text-blue-300 transition-all duration-500 cursor-pointer"
               onClick={(e) => {
@@ -78,7 +64,7 @@ function ContactUs(props) {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#010649] text-white text-[40px] py-3 text-center">
+      <div className="w-full bg-[#010649] text-white text-[30px] py-3 text-center">
         Thank You For Choosing Us!!
       </div>
     </section>

@@ -22,19 +22,19 @@ function AboutUs(props) {
   const team = [
     {
       name: "Harsh Talati",
-      role: "Head of blah",
+      
     },
     {
       name: "Tanisha Sahu",
-      role: "Head of blah",
+      
     },
     {
       name: "Prajakta Darade",
-      role: "Head of blah",
+      
     },
     {
       name: "Samip Shah",
-      role: "Head of blah",
+      
     },
   ];
 
@@ -62,7 +62,7 @@ function AboutUs(props) {
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {team.map((member, index) => (
-          <TeamMember key={index} name={member.name} role={member.role} index={index} />
+          <TeamMember key={index} name={member.name} index={index} />
         ))}
       </div>
     </motion.section>

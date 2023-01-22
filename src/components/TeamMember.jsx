@@ -28,9 +28,6 @@ function TeamMember(props) {
       <div className="-z-10 rounded-full h-[200px] w-[200px] md:h-[220px] md:w-[220px] grid grid-rows-3 shadow-sm bg-blue-300 mx-2 my-2 hover:shadow-2xl hover:scale-110 hover:bg-sky-600 hover:text-white duration-200 transition-all">
         <div className="row-start-2 row-end-3 text-center">
           <div className="font-semibold text-[24px] mb-2">{props.name}</div>
-          <div className="font-light text-gray-600 text-[18px]">
-            {props.role}
-          </div>
         </div>
       </div>
     </motion.div>

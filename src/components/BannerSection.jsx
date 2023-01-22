@@ -8,11 +8,6 @@ function BannerSection(props) {
     navigate("/WorkSpace");
   };
 
-  const userGuideLink = () => {
-    let guide = document.getElementById("UserGuide");
-    guide && guide.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="BannerSection"
@@ -59,30 +54,16 @@ function BannerSection(props) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <p className="mb-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          dolores recusandae porro. Ex perspiciatis voluptas sequi quasi
-          doloremque obcaecati.
-        </p>
+        <p className="mb-10">Confused and scared of taking that loan? Our web service helps to keep financials stable and your dreams growing. </p>
         <div className="flex">
           <motion.div
             initial={{ x: -400 }}
             animate={{ x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1 }}
             onClick={clickHandler}
             className="text-center border-[2px] w-fit mr-4 py-2 px-3 border-white rounded-full bg-gradient-to-tr from-purple-600 to-blue-700 hover:text-orange-400 hover:bg-white hover:scale-105 hover:border-orange-400 ease-out  duration-300 cursor-pointer"
           >
             Start
-          </motion.div>
-          <motion.div
-            initial={{ x: -400 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 1 }}
-            onClick={userGuideLink}
-            className="text-center border-[2px] w-fit py-2 px-3 border-white rounded-full bg-gradient-to-tr from-purple-600 to-blue-700 hover:text-orange-400 hover:bg-white hover:scale-105 hover:border-orange-400 
-            ease-out duration-300 cursor-pointer"
-          >
-            Guide
           </motion.div>
         </div>
       </motion.div>
